@@ -4,6 +4,8 @@ function handleCommets(id){
     let openModalBtn = document.getElementById("btn");
     let modal = document.getElementById("modal");
     let closeModalBtn = document.getElementById("closeModalBtn");
+    document.getElementById("box").innerHTML = "";
+
 
    if(a == 0){
     modal.style.display = "block";
@@ -14,7 +16,6 @@ function handleCommets(id){
         .then(comments => {
             console.log(comments);
             console.log(id);
-             document.getElementById("box").innerHTML = "";
             for (let data of comments) {
                 console.log(data);
                 const commentContainer = document.getElementById("box");
