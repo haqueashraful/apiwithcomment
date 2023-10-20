@@ -8,8 +8,7 @@ function handleCommets(id){
 
 
    if(a == 0){
-    modal.style.display = "block";
-    openModalBtn.style.display = "none";
+    modal.style.visibility = "visible";
 
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`)
         .then(response => response.json())
@@ -35,15 +34,13 @@ function handleCommets(id){
    }
     window.addEventListener("click", function(event){
     if (event.target == modal) {
-        modal.style.display = "none";
-        openModalBtn.style.display = "block";
+        modal.style.visibility = "hidden";
 
         }
     });
 
     closeModalBtn.addEventListener("click", function() {
-        modal.style.display = "none";
-        openModalBtn.style.display = "block";
+        modal.style.visibility = "hidden";
     });
 
         
